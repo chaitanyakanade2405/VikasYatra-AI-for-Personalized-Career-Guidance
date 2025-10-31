@@ -56,8 +56,8 @@ export function Navbar() {
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-2" onClick={closeMobileMenu}>
               <img
-                src="/edvanta-logo.png"
-                alt="Edvanta Logo"
+                src="/VikasYatra-logo.png"
+                alt="VikasYatra Logo"
                 className="h-8 w-8 sm:h-10 sm:w-10 lg:h-12 lg:w-12"
                 loading="lazy"
               />
@@ -68,7 +68,7 @@ export function Navbar() {
                     "Poppins, Inter, system-ui, -apple-system, sans-serif",
                 }}
               >
-                Edvanta
+                VikasYatra
               </span>
             </Link>
 
