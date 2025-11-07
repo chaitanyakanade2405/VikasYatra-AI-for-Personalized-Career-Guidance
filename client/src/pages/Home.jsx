@@ -151,7 +151,7 @@ function Home() {
               Process
             </Badge>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-text-primary mb-4 text-balance px-4">
-              How Edvanta Works
+              How VikasYatra Works
             </h2>
             <p className="text-base sm:text-lg lg:text-xl text-text-secondary max-w-2xl mx-auto leading-relaxed px-4">
               Get started in three simple steps and transform your learning
@@ -185,7 +185,7 @@ function Home() {
               Comparison
             </Badge>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-text-primary mb-4 text-balance px-4">
-              Why Choose Edvanta?
+              Why Choose VikasYatra?
             </h2>
             <p className="text-base sm:text-lg lg:text-xl text-text-secondary px-4">
               See how we compare to traditional learning platforms.
@@ -196,7 +196,7 @@ function Home() {
             <CardHeader className="bg-gray-50 border-b">
               <div className="grid grid-cols-3 gap-2 sm:gap-4 text-center">
                 <div></div>
-                <div className="font-semibold text-primary text-sm sm:text-base">Edvanta</div>
+                <div className="font-semibold text-primary text-sm sm:text-base">VikasYatra</div>
                 <div className="font-semibold text-text-secondary text-sm sm:text-base">Others</div>
               </div>
             </CardHeader>

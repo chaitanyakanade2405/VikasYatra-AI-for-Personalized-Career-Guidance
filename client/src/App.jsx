@@ -30,7 +30,7 @@ import { Roadmap } from "./pages/tools/Roadmap";
 import { ResumeBuilder } from "./pages/tools/ResumeBuilder";
 
 // Preload logo image instantly on app start
-const LOGO_SRC = "/edvanta-logo.png";
+const LOGO_SRC = "/VikasYatra-logo.png";
 const logoImg = new window.Image();
 logoImg.src = LOGO_SRC;
 

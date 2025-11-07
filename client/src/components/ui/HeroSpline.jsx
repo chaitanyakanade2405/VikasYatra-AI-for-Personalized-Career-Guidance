@@ -10,7 +10,7 @@ export default function HeroSpline() {
           Meet Your AI Learning Companion
         </h1>
         <p className="text-md md:text-xl text-gray-700 max-w-xl">
-          Unlock interactive, visual and personalized education with Edvanta's
+          Unlock interactive, visual and personalized education with VikasYatra   's
           3D AI robot. Experience the future of learning—engaging, smart and
           always by your side.
         </p>
