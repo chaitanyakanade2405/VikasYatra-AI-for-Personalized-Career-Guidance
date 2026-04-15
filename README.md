@@ -1,49 +1,190 @@
-# VikasYatra: AI-for Personalized Career Guidance
+# VikasYatra – AI-Powered Career Guidance Platform
 
-**VikasYatra** is a comprehensive, full-stack AI ecosystem designed to act as a personalized mentor for students. It bridges the gap between learning and career readiness by providing structured roadmaps, intelligent tutoring, and advanced resume analysis.
+VikasYatra (meaning *“Journey of Progress”*) is a full-stack AI-powered educational platform designed to provide **personalized career guidance** using cutting-edge Generative AI.
 
----
-
-## 🚀 Key Features
-
-* **Learning Roadmap:** Generates step-by-step career paths based on user goals using **Google Vertex AI**.
-* **AI Tutor & Doubt Solver:** Provides 24/7 contextual answers and guidance for academic queries using specialized prompts.
-* **Automated Quizzes:** Creates active-recall assessments from study materials with results stored in **MongoDB Atlas**.
-* **Resume Analyzer (Work in Progress):** Analyzes resumes against specific job descriptions to provide match scores and feedback.
-    > **Note:** We are currently building and training a **custom ML model from scratch** for this feature to provide more specialized analysis than generic LLMs.
-* **Visual Generator (Work in Progress):** An AI-driven feature designed to convert dense study text into visual storyboards to aid retention.
-* **Secure Authentication:** User-specific data and sessions are managed through **Firebase Authentication**.
+It combines multiple intelligent tools like tutoring, quizzes, resume analysis, and roadmap generation into one seamless web application.
 
 ---
 
-## 🛠️ Technical Architecture
+## 🌟 Features
 
-The platform is built on a modular, component-based **monorepo** architecture:
+### 🧠 AI-Powered Modules
 
-* **Frontend:** Built with **React.js** (Vite) and **Tailwind CSS** for a fast, responsive user interface.
-* **Backend:** A **Python Flask** API server that manages business logic and external integrations.
-* **Database:** **MongoDB Atlas** for persistent storage of user profiles, quiz history, and roadmaps.
-* **Cloud Storage:** **Cloudinary** for secure handling and storage of resume documents (PDF/DOCX).
-* **AI Engines:**
-    * **Google Vertex AI (Gemini):** Powers general text-based generation and conversational features.
-    * **Custom ML Model:** A proprietary model (under development) dedicated to high-accuracy resume parsing and matching.
+- 🤖 **Conversational AI Tutor**
+  - Multi-mode learning (Tutor, Debate, Interview, Chat)
+  - Voice input/output support
+
+- 💬 **Doubt-Solving Chatbot**
+  - Persistent chat sessions
+  - Context-aware responses
+
+- 📝 **AI Quiz Generator**
+  - Dynamic difficulty levels
+  - Auto scoring with feedback
+
+- 🛤️ **Career Roadmap Generator**
+  - Graph-based (DAG) learning paths
+  - Personalized based on goals & skills
+
+- 📄 **Resume Analyzer**
+  - Match score (0–100)
+  - Strengths & improvement suggestions
+
+- 🎬 **Visual Content Generator**
+  - Convert text/PDF/audio → AI-generated video
+  - Includes narration + captions
+
+- 🌍 **Multilingual Translation**
+  - Supports multiple languages
+  - Auto language detection
 
 ---
-## 📂 Project Structure
 
+## 🏗️ Tech Stack
+
+### 💻 Frontend
+- React 18
+- Vite
+- Tailwind CSS
+- Firebase Authentication
+
+### ⚙️ Backend
+- Flask (Python)
+- REST APIs
+- MongoDB Atlas
+
+### 🤖 AI & ML
+- Gemini 2.5 Flash & Pro (Google Vertex AI)
+- Imagen 4.0 (Image Generation)
+- Whisper (Speech-to-Text)
+- gTTS (Text-to-Speech)
+- Google Translate API
+
+### ☁️ Services
+- Cloudinary (Media Storage)
+- Firebase (Auth)
+- Vercel (Deployment)
+
+---
+
+## 🧩 System Architecture
 ```text
-VikasYatra/
-├── client/                # React Frontend (Vite)
-│   ├── src/               # UI components, pages, and hooks
-│   ├── public/            # Static assets
-│   ├── index.html         # Main entry point
-│   └── package.json       # Frontend dependencies
-├── server/                # Flask Backend
-│   ├── app/               # Flask application logic and routes
-│   ├── index.py           # Backend entry point
-│   ├── requirements.txt   # Python dependencies (Torch, VertexAI, Flask, etc.)
-│   ├── .env               # Environment variables (Mongo, Cloudinary, AI keys)
-│   └── venv/              # Python virtual environment
-└── README.md              # Project documentation
+Frontend (React)
+↓
+Flask API Gateway
+↓
+Service Layer (9 Modules)
+↓
+AI Models + Database + Cloud Services
+```
 
+- Modular architecture using Flask Blueprints
+- Microservices-inspired design
+- Scalable & maintainable
 
+---
+
+## ⚡ Key Highlights
+
+- 🔗 **40+ REST API endpoints**
+- 🧱 **Modular backend (9 services)**
+- 🧠 **Multi-model AI integration**
+- 📊 **User analytics dashboard**
+- 🔄 **Graceful fallback system (no downtime)**
+
+---
+
+## 📊 Performance
+
+- ⚡ Fast responses using Gemini Flash
+- 🎥 Async video generation pipeline
+- 💾 MongoDB + in-memory fallback
+- 📈 Scalable via serverless deployment
+
+---
+
+## 🚀 Getting Started
+
+### 📌 Prerequisites
+
+Make sure you have the following installed:
+
+- Node.js (v18+ recommended)
+- Python (v3.9+ recommended)
+- MongoDB Atlas account or local MongoDB
+- Git
+
+---
+
+### 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/your-username/vikasyatra.git
+cd vikasyatra
+```
+### 2️⃣ Setup Backend
+```bash
+cd backend
+pip install -r requirements.txt
+```
+### 🔑 Create .env file in backend folder:
+```bash
+MONGO_URI=your_mongodb_uri
+GOOGLE_API_KEY=your_vertex_ai_key
+CLOUDINARY_URL=your_cloudinary_url
+FIREBASE_CONFIG=your_firebase_config
+EMAIL_USER=your_email
+EMAIL_PASS=your_email_password
+```
+### ▶️ Run Backend Server
+```bash
+python app.py
+```
+### 3️⃣ Setup Frontend
+
+Open a new terminal:
+```bash
+cd frontend
+npm install
+```
+### ▶️ Run Frontend
+```bash
+npm run dev
+```
+### 4️⃣ Access the App
+```bash
+Frontend: http://localhost:5173
+Backend API: http://localhost:5000
+```
+### 📁 Project Structure
+```text
+vikasyatra/
+│
+├── frontend/        # React app
+├── backend/
+│   ├── routes/      # Flask blueprints
+│   ├── services/    # Business logic
+│   ├── utils/       # Helper functions
+│   └── app.py
+│
+├── models/          # Database schemas
+├── assets/          # Static files
+└── README.md
+```
+### 🎯 Use Cases
+- 🎓 Students exploring career paths
+- 💼 Job seekers improving resumes
+- 📚 Self-learners building skills
+- 🌍 Rural users needing guidance
+
+### ⚠️ Limitations
+- No RAG-based knowledge retrieval yet
+- Limited multilingual voice support
+- In-memory job queue (not persistent)
+
+### 🔮 Future Improvements
+- 🔍 RAG-based tutoring system
+- 📱 Mobile app (React Native)
+- 🧠 AI evaluation metrics (BLEU/ROUGE)
+- 🔐 Secure authentication validation
+- ⚙️ Redis-based job queue
